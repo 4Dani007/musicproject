@@ -1,14 +1,334 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-html { width: 100%; height:100%; overflow:hidden; }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+}
 
 body{
-	width: 100%;
-	height: 100%;
-	background: #092756;
-	background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
-  	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-  	background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-  	background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-  	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #670d10 0%,#092756 100%);
-  	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-size:cover;
+	background-position: center center;
+	display: flex;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background: linear-gradient(to right, rgba(2, 2, 2, 0.726) 15%, rgba(8, 8, 8, 0.829)), url(../images/ImagMusic.jpg);
+
 }
+.i-logo{
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    color: rgba(255, 255, 255, 0.726);
+    font-weight: bold;
+}
+.logoAcompa{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.s-logo{
+    color:#08b857;
+    font-weight: bold;
+    font-size: 60px;
+}
+.login{
+    margin-top: 25px;
+    width: 25%;
+    text-align: center;
+    width: 25%;
+    border-top: solid 5px rgba(255, 255, 255, 0.425);
+    padding-top: 20px;
+    border-radius: 5px;
+}
+@media screen and (max-width: 450px) {
+	.login{
+		width: 90%;
+	}
+  }
+  @media screen and (max-width: 520px) {
+	  .login{
+		  width: 70%;
+	  }
+	}
+	.contenedor-input{
+		width: 100%;
+	}
+  .input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    background: rgba(20, 20, 20, 0.11);
+    border: solid .5px rgba(216, 214, 214, 0.747);
+    color: rgba(219, 219, 219, 0.815);
+    font-size: 25px;
+    font-weight: bold;
+    padding:5px;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    border: solid .1px rgba(255, 255, 255, 0.418);
+    padding: 1px;
+    border-radius: 55px;
+}
+.btn:hover{
+    background: #08b857dc;
+}
+.btn-green{
+    background: #08b857;
+    width: 80%;
+    margin-top: 20px;
+    font-weight: bold;
+} 
+
+/*Comienza el diseño del contenedor APP*/
+	.app{
+		height: 85vh;
+		width: 100vw;
+		display: flex;
+		font-family: 'Architects Daughter', sans-serif;
+		color: #ffffffe3;
+	}
+	.album{ /*Cuadro del album*/
+		background: linear-gradient(to right, rgba(2, 2, 2, 0.726) 15%, rgba(8, 8, 8, 0.829)), url(../images/ImagMusic.jpg);
+		background-size:cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 88vh;
+		width: 80vw;
+		position: relative;
+		right: 0;
+		overflow: scroll;
+	}
+	.menu-inicio{
+		height: 85vh;
+		width: 20vw;
+		background: rgba(0, 0, 0, 0.178);
+	}
+	.reproducir{
+		height: 15vh;
+		width: 100vw;
+		background: rgba(0, 0, 0, 0.178);
+		position: static;
+		border: 3px solid #31005285;
+	}
+	.logo{
+		text-align: center;
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+	.i-logo2{
+		font-size: 35px;
+	}
+	.play{
+		text-decoration: none;
+		font-size: 20px;
+		color: #6d6d6db0;
+		text-align: center;
+		display: block;
+		padding: 10px;
+		font-family: 'Architects Daughter', sans-serif;
+	}
+	/*Lineas de Music project*/
+	.play:hover{
+		background: rgba(90, 89, 89, 0.486);
+	}
+	.playlist{
+		border-top: solid .10px #ffffff4d;
+	}
+	.playlists:last-child{
+		border-bottom: solid .10px #ffffff4d;
+	}
+	/* */
+	.user{
+		display: flex;
+		justify-content: space-between;
+		height: 7vh;
+		align-items: center;
+		margin-top: 5px;
+		margin-right: 10px;
+		cursor: pointer;
+	}
+	.user:hover + .animate{ /*Movimiento de la linea*/
+		width: 100%;
+		transition: all ease .6s;
+	}
+	.animate{ /*Linea*/
+		border-bottom: solid .3px #2205ff88;
+		width: 50%;
+		margin: auto auto;
+		margin-bottom: 15px;
+		transition: all ease-in .6s;
+	}
+	.user-desc{
+		font-size: 20px;
+		transition: all ease-in-out .6s;
+	}
+	.user-desc:hover{
+		color: #08b857dc;
+		transition: all ease-in-out .6s;
+	}
+	.user-desc i{
+		margin-right: 10px;
+	}
+	
+	.close{
+		color: #ffffffef;
+		display: inline-block;
+		margin-left: 10px;
+		font-size: 30px;
+		transition: all ease-in-out .3s;
+	}
+	.close:hover{
+		color: rgba(209, 4, 4, 0.863);
+		transition: all ease-in-out .3s;
+	}
+	.acciones{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.play2{
+		width: 25%;
+	}
+	.reaccion-inactiva,.play-music,.control{
+		display: flex;
+		width: 50px;
+		height: 50px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		margin-top: 20px;
+	}
+	.album-description{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.title h2{
+		font-size: 30px;
+	}
+	.reaccion-activa{
+		background: rgb(221, 147, 147);
+		font-size: 30px;
+		color: #ee3b3b;
+		animation: latir linear 2s;
+		animation-iteration-count: infinite;
+		transform-origin: 50% 50%;
+		
+	  }
+	  .reaccion-activa-reproducida{
+		background: rgb(3, 158, 73);
+		font-size: 30px;
+		
+	  }
+	  @keyframes latir{
+		0% {
+		  opacity:1;
+		  transform:  scaleX(1.00) scaleY(1.00) ;
+		}
+		25% {
+		  opacity:1;
+		  transform:  scaleX(0.95) scaleY(0.95) ;
+		}
+		50% {
+		  opacity:1;
+		  transform:  scaleX(1.40) scaleY(1.40) ;
+		}
+	
+	  }
+	.album-list-music{
+		margin-top: 20px;
+	}
+	
+	.name{
+		display: inline-block;
+	}
+	.play-music{
+		margin-top: 0;
+	}
+	.music{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: solid .3px #ffffff88;
+		padding: 5px;
+		padding-right:20px ;
+	}
+	.music:hover{
+		cursor: pointer;
+		background: #ffffff3d;
+	}
+	.music:last-child{
+		border-bottom: solid .3px #ffffff88;
+	}
+	
+	.reproducir{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.controles{
+		display: flex;
+		justify-content: space-around;
+		
+	}
+	.control{
+		margin: 5px;
+	}
+	
+	/*Para ocultar text movil*/
+@media screen and (max-width: 450px) {
+    .album-description{
+        display: flex;
+        flex-direction: column;
+    }
+    .description{
+        display: none;
+        font-size:0;
+    }
+    .acciones input{
+        width: 87%;
+    }
+    #reaccion{
+        display: none;
+    }
+    .title h2{
+        text-align: center;
+        font-size: 12px;
+    }
+    .title span{
+        display: none;
+    }
+    .app{
+        height:80vh;
+    }
+    .reproducir{
+        height:20vh;
+        align-items:flex-start;
+        padding-top:10px;
+    }
+    .i-logo,.play{
+        font-size: 1rem;
+    }
+    .menu-aside{
+        width: 30vw;
+    }
+    .album{
+        width: 70vw;
+    }
+    
+    
+    .time{
+        display: none;
+    }
+  }
