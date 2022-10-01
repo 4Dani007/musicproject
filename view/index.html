@@ -26,5 +26,28 @@
     <p>Aun no te registras en Music Project? hazlo </p><a color="#FF0000" href="registro.html">ahora!</a>
     </div>
 </div>
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+	import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+  
+	// Your web app's Firebase configuration
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	const firebaseConfig = {
+	  apiKey: "AIzaSyBi7DzontSPdwprZWC0T8i7LrBbzAJnoAc",
+	  authDomain: "music-project-ad76f.firebaseapp.com",
+	  projectId: "music-project-ad76f",
+	  storageBucket: "music-project-ad76f.appspot.com",
+	  messagingSenderId: "578566628796",
+	  appId: "1:578566628796:web:6b799d5833764dd9caf7b9",
+	  measurementId: "G-Q4WKZL4FVC"
+	};
+  
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const analytics = getAnalytics(app);
+  </script>
 </body>
 </html>
