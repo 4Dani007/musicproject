@@ -1,4 +1,4 @@
- //se invocan los metodos necesarios para la conexion
+//se invocan los metodos necesarios para la conexion
 var mysql  = require('mysql');
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 var cnt = 0;
 
-//conexion
+//hacer conexion
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
@@ -16,10 +16,10 @@ var connection = mysql.createConnection({
     database: 'musicproject',
     useConnectionPooling:true
 });
-
+    //agregar datos a la tabla
 var addSql = 'INSERT INTO usuarios (email, user, password) VALUES (?,?,?)';
 var addSqlParams=new Array(3);
-//visualizacion pagina wev
+//visualizacion pagina web
 app.use(express.static(path.join(__dirname, 'public')));
 //procesamiento de datos
 app.post('/posttable', urlencodedParser, function (req, res) {
@@ -37,7 +37,7 @@ app.post('/posttable', urlencodedParser, function (req, res) {
     console.log('insert success!');
     res.end('<a href="./paginainicio.html">Iniciar Sesion</a>');
 });
-
+//verificacion de que la base esta conectada
 app.listen(8000, () => {
     console.log('server listening at port 8000')
 });

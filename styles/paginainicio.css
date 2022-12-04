@@ -16,6 +16,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 .container{
     position: relative;
     width: 100%;
@@ -243,17 +244,34 @@ body{
     opacity: 1;
     transition: var(--efect);
 }
+
+
 .container section .contenedor_contenido .podcast .card_podcast{
     transition: var(--efect);
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex-basis:calc((100% / 4) - 20px);
+    flex-basis:calc((100% / 2) - 20px);
     margin: 10px;
     background-color: #181818;
     padding:  1em;
     cursor: pointer;
     border-radius: var(--radius);
+}
+
+.video-js .vjs-progress-holder .vjs-play-progress, .video-js .vjs-progress-holder{
+    position: absolute;
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    background-color: #00FF13;
+    opacity: 70%;
+}
+
+.video-js .vjs-volume-control .vjs-slider{
+    background-color: #00FF13;
 }
 
 .container section .contenedor_contenido .podcast .card_podcast:hover{
